@@ -1,9 +1,14 @@
-$titlefont:'Shrikhand', cursive;
-$txtfont: 'Roboto', sans-serif;
-$primarycolor:#9356DC;
-$secondarycolor:#FF79DA; 
-$tertiarycolor:#99E2D0;
+@import "./base/base";
+@import "./utils/variables";
+@import"./utils/keyframes";
+@import"./layout/loader";
 
 header{
-    font-family: $titlefont
+    font-family: $titlefont;
+} 
+main{
+    font-family: $txtfont;
 }
+
+
+

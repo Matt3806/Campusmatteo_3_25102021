@@ -1,0 +1,20 @@
+@keyframes load{
+    0%{
+        color:whitesmoke;
+        text-shadow: 0 0 7px whitesmoke;
+    }
+    80%{
+        color: $primarycolor;
+        text-shadow: 0 0 7px $primarycolor;
+    }
+    100%{
+        color:$loadercolor;
+        text-shadow: 0 0 7px $loadercolor;  
+    }
+}
+@keyframes fondu-out{
+    100%{
+        opacity:0;
+        z-index:-1;
+    }
+}
