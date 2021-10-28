@@ -9,3 +9,21 @@
 body {
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color:inherit;
+    cursor:pointer;
+    opacity:.9;
+    &:hover{
+        opacity:1;
+    }
+}
+button{
+    border-style: none;
+    cursor: pointer;
+    opacity:.9;
+    box-shadow: #a5a5a5 0 5px 10px;
+    &:hover{
+        opacity:1;
+    }
+}

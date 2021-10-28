@@ -2,13 +2,59 @@
 @import "./utils/variables";
 @import"./utils/keyframes";
 @import"./layout/loader";
+@import"./utils/mixin";
+@import"./components/btn";
+
 
 header{
     font-family: $titlefont;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding:15px;
 } 
 main{
     font-family: $txtfont;
 }
+.find{
+    display:flex;
+    flex-direction:column;
+    &__where{
+        display:flex;
+        justify-content:center;
+        width:100%;
+        padding:15px;
+        background-color: $bgcolorbold ;
+        box-shadow:  0 4px 4px inset #c0c0c0;
+        font-size:18px ;
+        & i{
+            position:relative;
+            left:-15px;
+        }
+    }
+    &__what{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        align-items:center;
+        width:100%;
 
-
+        padding:40px;
+        font-size: 18px;
+        text-align: center;
+        background-color: $bgcolor;
+        & p{
+            font-size:18px;
+            padding-left:45px;
+            padding-right:45px;
+            margin-bottom: 25px;
+        }
+    }
+    & h2 {
+        padding-left:55px;
+        padding-right:55px;
+        margin-bottom: 15px;
+    }
+}
 

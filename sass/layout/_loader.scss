@@ -8,9 +8,10 @@ height:100%;
 background-color: $primarycolor;
 opacity:0.8;
 animation: fondu-out 0.1s ease-out;
-animation-delay: 2.7s;
+animation-delay: 1.8s;
 animation-fill-mode: both;
-    .loader__letter{
+z-index:10;
+    &__letter{
         display:flex;
         font-family: $titlefont;
         font-size:120px;

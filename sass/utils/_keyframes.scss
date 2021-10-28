@@ -1,7 +1,7 @@
 @keyframes load{
     0%{
-        color:whitesmoke;
-        text-shadow: 0 0 7px whitesmoke;
+        color:$loadercolor;
+        text-shadow: 0 0 7px $loadercolor;
     }
     80%{
         color: $primarycolor;
@@ -9,7 +9,7 @@
     }
     100%{
         color:$loadercolor;
-        text-shadow: 0 0 7px $loadercolor;  
+        text-shadow: 0 0 7px $loadercolor;
     }
 }
 @keyframes fondu-out{

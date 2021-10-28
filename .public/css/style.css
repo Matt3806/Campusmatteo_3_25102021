@@ -10,6 +10,26 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.9;
+}
+a:hover {
+  opacity: 1;
+}
+
+button {
+  border-style: none;
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: #a5a5a5 0 5px 10px;
+}
+button:hover {
+  opacity: 1;
+}
+
 @keyframes load {
   0% {
     color: whitesmoke;
@@ -40,10 +60,11 @@ body {
   background-color: #9356DC;
   opacity: 0.8;
   animation: fondu-out 0.1s ease-out;
-  animation-delay: 2.7s;
+  animation-delay: 1.8s;
   animation-fill-mode: both;
+  z-index: 10;
 }
-.loader .loader__letter {
+.loader__letter {
   display: flex;
   font-family: "Shrikhand", cursive;
   font-size: 120px;
@@ -52,22 +73,77 @@ body {
   animation: load 0.9s linear;
   animation-iteration-count: 3;
 }
-.loader .loader__letter:nth-child(1) {
+.loader__letter:nth-child(1) {
   animation-delay: 0.2s;
 }
-.loader .loader__letter:nth-child(2) {
+.loader__letter:nth-child(2) {
   animation-delay: 0.4s;
 }
-.loader .loader__letter:nth-child(3) {
+.loader__letter:nth-child(3) {
   animation-delay: 0.6s;
+}
+
+.btn {
+  width: 55%;
+  height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: whitesmoke;
+  padding: auto;
+  border-radius: 25px;
+  font-size: 18px;
 }
 
 header {
   font-family: "Shrikhand", cursive;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
 main {
   font-family: "Roboto", sans-serif;
+}
+
+.find {
+  display: flex;
+  flex-direction: column;
+}
+.find__where {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 15px;
+  background-color: #e2e2e2;
+  box-shadow: 0 4px 4px inset #c0c0c0;
+  font-size: 18px;
+}
+.find__where i {
+  position: relative;
+  left: -15px;
+}
+.find__what {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.find__what p {
+  font-size: 18px;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-bottom: 25px;
+}
+.find h2 {
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-bottom: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
