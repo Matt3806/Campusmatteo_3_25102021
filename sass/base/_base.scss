@@ -19,11 +19,15 @@ a{
     }
 }
 button{
+    background-color: white;
     border-style: none;
     cursor: pointer;
     opacity:.9;
-    box-shadow: #a5a5a5 0 5px 10px;
     &:hover{
         opacity:1;
     }
+}
+ul, nav
+{
+	list-style-type: none;
 }

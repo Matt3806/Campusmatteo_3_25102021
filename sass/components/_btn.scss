@@ -1,9 +1,10 @@
 .btn{
-    width:55%;
+
     height:50px;
     background: linear-gradient($secondarycolor, $primarycolor);
     color:$loadercolor;
-    padding:auto;
+    box-shadow: #a5a5a5 0 5px 10px;
     border-radius: 25px;
+    padding:15px;
     font-size: 18px;
 }
