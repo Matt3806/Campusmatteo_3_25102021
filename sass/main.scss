@@ -2,21 +2,13 @@
 @import "./utils/variables";
 @import"./utils/keyframes";
 @import"./layout/loader";
-@import"./utils/mixin";
+@import"./utils/mixins";
 @import"./components/btn";
+@import"./layout/footer";
+@import"./layout/header";
 
 
-header{
-    font-family: $titlefont;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    padding:15px;
-}
-main{
-    font-family: $txtfont;
-}
+
 .find{
     display:flex;
     flex-direction:column;
@@ -44,14 +36,14 @@ main{
         font-size: 18px;
         text-align: center;
         background-color: $bgcolor;
-        & p{
+        p{
             font-size:18px;
             padding-left:45px;
             padding-right:45px;
             margin-bottom: 25px;
         }
     }
-    & h2 {
+    h2 {
         padding-left:55px;
         padding-right:55px;
         margin-bottom: 15px;
@@ -64,15 +56,15 @@ main{
     align-items:flex-start;
     padding:15px;
     font-size: 18px;
-    & h2{
+    h2{
         width:100%;
         height:70px;
         display:flex;
         align-items: center;
     }
-    & ul{
+    ul{
         width:100%;
-        & li{
+        li{
             display:flex;
             align-items: center;
             width:100%;
@@ -81,7 +73,7 @@ main{
             margin:15px 0 15px 0;
             background: $bgcolor;
             box-shadow: #a5a5a5 0 5px 10px;
-            & .number{
+            .number{
                 display:flex;
                 justify-content: center;
                 align-items: center;
@@ -94,7 +86,7 @@ main{
                 background-color: $primarycolor;
                 color: $loadercolor;
             }
-            & i{
+            i{
                 margin:0 15px 0 0;
                 padding:0;
             }
@@ -113,12 +105,11 @@ main{
     padding:20px;
     background-color: $bgcolor;
 
-    & h2{
+    h2{
         margin-top: 30px;
         margin-bottom: 30px;
     }
-
-    & .restaurant__card{
+    &__card{
         width:100%;
         height:300px;
         display:flex;
@@ -127,11 +118,22 @@ main{
         box-shadow: 0px 5px 20px rgb(153 153 153 / 30%);
         margin-top: 15px;
         margin-bottom: 15px;
-        & img{
-            height: 70%;
+        img{
             width: 100%;
+            height:70%;
             object-fit: cover;
             border-radius: 15px 15px 0 0;
+        }
+        &--new{
+            align-self: flex-end;
+            background-color: $tertiarycolor;
+            padding:10px 20px 10px 20px;
+            border-radius: 5px;
+            color:$new;
+            font-weight: bold;
+            position:relative;
+            bottom:195px;
+            right:15px;
         }
         & .card__description{
             display:flex;
@@ -139,7 +141,7 @@ main{
             align-items: center;
             height:100%;
             padding: 0 15px 0 15px;
-            & i{
+             i{
                 font-size:30px;
                 &:hover{
                     font-weight: 900;
@@ -151,20 +153,9 @@ main{
         }
     }
 }
-footer{
-    padding:20px;
-    background-color: $bgfooter;
-    color: $loadercolor;
-    & h1{
-        font-family: $titlefont;
-        font-size: 20px;
-        font-weight: lighter;
-    }
-    & li{
-        margin: 15px 0 15px 0;
-        & i{
-            margin-right: 15px;
-        }
-    }
-}
+
+
+
+
+
 

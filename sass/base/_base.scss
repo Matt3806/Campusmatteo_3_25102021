@@ -9,6 +9,11 @@
 body {
     box-sizing: border-box;
 }
+
+main{
+    font-family: 'Roboto', sans-serif;
+}
+
 a{
     text-decoration: none;
     color:inherit;
@@ -18,6 +23,7 @@ a{
         opacity:1;
     }
 }
+
 button{
     background-color: white;
     border-style: none;
@@ -27,6 +33,7 @@ button{
         opacity:1;
     }
 }
+
 ul, nav
 {
 	list-style-type: none;
