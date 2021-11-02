@@ -1,0 +1,6 @@
+@mixin heartfill {
+    font-weight: 900;
+    background: -webkit-linear-gradient($secondarycolor, $primarycolor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

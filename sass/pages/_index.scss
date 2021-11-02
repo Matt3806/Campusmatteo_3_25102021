@@ -1,0 +1,141 @@
+.find{
+    display:flex;
+    flex-direction:column;
+    &__where{
+        display:flex;
+        justify-content:center;
+        width:100%;
+        padding:15px;
+        background-color: $bgcolorbold ;
+        box-shadow:  0 4px 4px inset #c0c0c0;
+        font-size:18px ;
+        & i{
+            position:relative;
+            left:-15px;
+        }
+    }
+    &__what{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        align-items:center;
+        width:100%;
+
+        padding:40px;
+        font-size: 18px;
+        text-align: center;
+        background-color: $bgcolor;
+        p{
+            font-size:18px;
+            padding-left:45px;
+            padding-right:45px;
+            margin-bottom: 25px;
+        }
+    }
+    h2 {
+        padding-left:55px;
+        padding-right:55px;
+        margin-bottom: 15px;
+    }
+}
+.howto {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    padding:15px;
+    font-size: 18px;
+    h2{
+        width:100%;
+        height:70px;
+        display:flex;
+        align-items: center;
+    }
+    ul{
+        width:100%;
+        li{
+            display:flex;
+            align-items: center;
+            width:100%;
+            height:70px;
+            border-radius:15px;
+            margin:15px 0 15px 0;
+            background: $bgcolor;
+            box-shadow: #a5a5a5 0 5px 10px;
+            .number{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin:0 15px 0 0;
+                border:solid;
+                border-radius: 50%;
+                width:25px;
+                position:relative;
+                left:-10px;
+                background-color: $primarycolor;
+                color: $loadercolor;
+            }
+            i{
+                margin:0 15px 0 0;
+                padding:0;
+            }
+            &:hover{
+            background-color: $ulcolor;
+            & i{
+                color:$primarycolor;
+            }
+            } 
+        }
+    }
+}
+.restaurant{
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    background-color: $bgcolor;
+
+    h2{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    &__card{
+        width:100%;
+        height:300px;
+        display:flex;
+        flex-direction:column;
+        border-radius:15px;
+        box-shadow: 0px 5px 20px rgb(153 153 153 / 30%);
+        margin-top: 15px;
+        margin-bottom: 15px;
+        img{
+            width: 100%;
+            height:70%;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+        &--new{
+            align-self: flex-end;
+            background-color: $tertiarycolor;
+            padding:10px 20px 10px 20px;
+            border-radius: 5px;
+            color:$new;
+            font-weight: bold;
+            position:relative;
+            bottom:195px;
+            right:15px;
+        }
+        & .card__description{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            height:100%;
+            padding: 0 15px 0 15px;
+             i{
+                font-size:30px;
+                &:hover{
+                    @include heartfill;
+                }
+            }
+        }
+    }
+}
