@@ -4,3 +4,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+@mixin appear($time: 2s) {
+    opacity:0;
+    animation: fondu-in 0.2s ease-out;
+    animation-delay: $time;
+    animation-fill-mode: both;
+}
+@mixin slidein($time2:1.6s){
+    position:relative;
+    left:-100%;
+    animation:slide 1s forwards;
+    animation-delay: $time2;
+}

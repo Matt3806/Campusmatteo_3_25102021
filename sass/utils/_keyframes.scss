@@ -18,3 +18,22 @@
         z-index:-1;
     }
 }
+@keyframes fondu-in{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes slide{
+	0%{
+        left: -100%;  
+    }
+	90%{
+        left:1%; 
+    }
+	100%{
+        left:0%;
+    }
+}

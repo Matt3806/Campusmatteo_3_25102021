@@ -58,6 +58,25 @@ ul, nav {
     z-index: -1;
   }
 }
+@keyframes fondu-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+  90% {
+    left: 1%;
+  }
+  100% {
+    left: 0%;
+  }
+}
 .btn {
   height: 50px;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -75,6 +94,10 @@ hr {
   border: 0;
   margin-top: 5px;
   margin-bottom: 15px;
+  position: relative;
+  left: -100%;
+  animation: slide 1s forwards;
+  animation-delay: 1.8s;
 }
 
 .loader {
@@ -98,7 +121,7 @@ hr {
   color: whitesmoke;
   text-shadow: 0 0 7px whitesmoke;
   animation: load 0.9s linear;
-  animation-iteration-count: 3;
+  animation-iteration-count: 2;
 }
 .loader__letter:nth-child(1) {
   animation-delay: 0.2s;
@@ -325,20 +348,60 @@ header {
 }
 .menu h3 {
   margin-top: 25px;
+  position: relative;
+  left: -100%;
+  animation: slide 1s forwards;
+  animation-delay: 1.6s;
 }
 .menu ul li {
   display: flex;
-  flex-direction: column;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.3);
   margin: 15px 0 15px 0;
+}
+.menu ul li i {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 15px 15px 0;
+}
+.menu .li__1 {
+  opacity: 0;
+  animation: fondu-in 0.2s ease-out;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+.menu .li__2 {
+  opacity: 0;
+  animation: fondu-in 0.2s ease-out;
+  animation-delay: 2.2s;
+  animation-fill-mode: both;
+}
+.menu .li__3 {
+  opacity: 0;
+  animation: fondu-in 0.2s ease-out;
+  animation-delay: 2.4s;
+  animation-fill-mode: both;
+}
+.menu .li__content {
+  flex: 3;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 15px;
 }
-.menu ul .ul__description {
+.menu .li__price {
+  flex: 1;
+  padding: 15px;
   display: flex;
-  justify-content: space-between;
-  font-size: 14px;
+  flex-direction: center;
+  align-items: flex-end;
 }
 .menu .btn {
   align-self: center;
@@ -346,6 +409,10 @@ header {
   justify-content: center;
   width: 50%;
   margin: 25px 0 25px 0;
+  opacity: 0;
+  animation: fondu-in 0.2s ease-out;
+  animation-delay: 2s;
+  animation-fill-mode: both;
 }
 
 /*# sourceMappingURL=style.css.map */

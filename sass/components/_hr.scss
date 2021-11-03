@@ -5,4 +5,5 @@ hr{
 	border:0;
 	margin-top:5px;
 	margin-bottom: 15px;
+	@include slidein(1.8s);
 }
