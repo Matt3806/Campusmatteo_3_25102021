@@ -77,6 +77,20 @@ ul, nav {
     left: 0%;
   }
 }
+@keyframes check {
+  0% {
+    flex: 0;
+    background-color: white;
+  }
+  70% {
+    flex: 1.5;
+    background-color: #99E2D0;
+  }
+  100% {
+    flex: 1;
+    background-color: #99E2D0;
+  }
+}
 .btn {
   height: 50px;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -85,6 +99,9 @@ ul, nav {
   border-radius: 25px;
   padding: 15px;
   font-size: 18px;
+  display: flex;
+  justify-content: center;
+  width: 60%;
 }
 
 hr {
@@ -356,16 +373,20 @@ header {
 .menu ul li {
   display: flex;
   background-color: white;
+  height: 75px;
   border-radius: 15px;
   box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.3);
   margin: 15px 0 15px 0;
 }
+.menu ul li:hover i {
+  animation: check 0.5s ease-in-out;
+  animation-fill-mode: both;
+}
 .menu ul li i {
-  flex: 1;
+  flex: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #99E2D0;
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -389,25 +410,32 @@ header {
   animation-delay: 2.4s;
   animation-fill-mode: both;
 }
+.menu .li__4 {
+  opacity: 0;
+  animation: fondu-in 0.2s ease-out;
+  animation-delay: 2.6s;
+  animation-fill-mode: both;
+}
 .menu .li__content {
   flex: 3;
-  width: 100%;
+  width: 150px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .li__price {
   flex: 1;
   padding: 15px;
   display: flex;
-  flex-direction: center;
+  justify-content: flex-end;
   align-items: flex-end;
 }
 .menu .btn {
   align-self: center;
-  display: flex;
-  justify-content: center;
-  width: 50%;
   margin: 25px 0 25px 0;
   opacity: 0;
   animation: fondu-in 0.2s ease-out;

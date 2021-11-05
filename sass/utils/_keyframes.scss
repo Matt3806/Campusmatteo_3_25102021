@@ -37,3 +37,17 @@
         left:0%;
     }
 }
+@keyframes check{
+    0%{
+        flex:0;
+        background-color:white ;
+    }
+    70%{
+        flex:1.5;
+        background-color:$tertiarycolor;
+    }
+    100%{
+        flex:1;
+        background-color:$tertiarycolor ;
+    }
+}
