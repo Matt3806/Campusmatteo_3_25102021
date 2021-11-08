@@ -25,7 +25,7 @@ a:hover {
 }
 
 button {
-  background-color: white;
+  background: 0;
   border-style: none;
   cursor: pointer;
   opacity: 0.9;
@@ -68,7 +68,7 @@ ul, nav {
 }
 @keyframes slide {
   0% {
-    left: -100%;
+    left: -200%;
   }
   90% {
     left: 1%;
@@ -92,8 +92,7 @@ ul, nav {
   }
 }
 .btn {
-  height: 50px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
   color: whitesmoke;
   box-shadow: #a5a5a5 0 5px 10px;
   border-radius: 25px;
@@ -102,6 +101,15 @@ ul, nav {
   display: flex;
   justify-content: center;
   width: 60%;
+  max-width: 300px;
+}
+.btn:hover {
+  background: linear-gradient(356deg, #a16be0 0%, #a16be0 33%, #ff93e1 88%, #ff93e1 100%);
+  box-shadow: #4b4b4b 0 5px 10px;
+  transition: 0.5s ease-in-out;
+}
+.btn:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 hr {
@@ -112,7 +120,7 @@ hr {
   margin-top: 5px;
   margin-bottom: 15px;
   position: relative;
-  left: -100%;
+  left: -300%;
   animation: slide 1s forwards;
   animation-delay: 1.8s;
 }
@@ -154,6 +162,7 @@ footer {
   padding: 20px;
   background-color: #2e2e2e;
   color: whitesmoke;
+  z-index: 2;
 }
 footer h1 {
   font-family: "Shrikhand", cursive;
@@ -313,6 +322,7 @@ header {
   position: relative;
   bottom: 195px;
   right: 15px;
+  margin-bottom: -45px;
 }
 .restaurant__card .card__description {
   display: flex;
@@ -348,6 +358,7 @@ header {
   padding: 25px;
   position: relative;
   bottom: 50px;
+  margin-bottom: -50px;
 }
 .menu__title {
   font-family: "Shrikhand", cursive;
@@ -366,7 +377,7 @@ header {
 .menu h3 {
   margin-top: 25px;
   position: relative;
-  left: -100%;
+  left: -300%;
   animation: slide 1s forwards;
   animation-delay: 1.6s;
 }
@@ -427,6 +438,16 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menu .li__content h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .li__content p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .menu .li__price {
   flex: 1;
   padding: 15px;
@@ -441,6 +462,78 @@ header {
   animation: fondu-in 0.2s ease-out;
   animation-delay: 2s;
   animation-fill-mode: both;
+}
+
+@media (min-width: 768px) {
+  .container__index {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .howto ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .howto ul a {
+    flex: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .restaurant__column {
+    display: flex;
+    flex-direction: column;
+  }
+  .restaurant__wrap {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .restaurant__wrap a {
+    margin: 0 10px 10px 10px;
+  }
+}
+@media (min-width: 992px) {
+  .container__index {
+    flex-direction: row;
+  }
+  .container__index--1 {
+    flex: 1;
+  }
+
+  .find__what {
+    padding: 40px 15px 40px 15px;
+  }
+
+  .howto ul {
+    flex-direction: column;
+  }
+
+  .restaurant {
+    flex: 2;
+    box-shadow: 0 4px 4px inset #c0c0c0;
+  }
+}
+@media (min-width: 992px) {
+  .container__EPD {
+    display: flex;
+  }
+  .container__EPD--E {
+    flex: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .container__EPD--P {
+    flex: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .container__EPD--D {
+    flex: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,7 +12,19 @@
 }
 @mixin slidein($time2:1.6s){
     position:relative;
-    left:-100%;
+    left:-300%;
     animation:slide 1s forwards;
     animation-delay: $time2;
+}
+
+@mixin lightme {
+    background: linear-gradient(
+        356deg,
+        lighten($primarycolor,5%) 0%,
+        lighten($primarycolor,5%) 33%,
+        lighten($secondarycolor,5%) 88%,
+        lighten($secondarycolor,5%) 100%,
+    );
+    box-shadow: #4b4b4b 0 5px 10px;
+    transition: .5s ease-in-out;
 }
