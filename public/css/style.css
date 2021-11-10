@@ -120,7 +120,6 @@ ul, nav {
   font-size: 18px;
   display: flex;
   justify-content: center;
-  width: 60%;
   max-width: 300px;
 }
 .btn:hover {
@@ -517,8 +516,9 @@ header {
   bottom: -25px;
   opacity: 0;
   animation: fondu-in 0.2s ease-out;
-  animation-delay: 2s;
+  animation-delay: 2.8s;
   animation-fill-mode: both;
+  width: 35%;
 }
 
 @media (min-width: 768px) {
