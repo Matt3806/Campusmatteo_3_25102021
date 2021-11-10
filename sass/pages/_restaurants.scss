@@ -15,20 +15,31 @@
     position:relative;
     bottom:50px;
     margin-bottom: -50px;
+    & button :hover{
+        @include heartfill;
+        transition:.5s ease-in-out;
+    }
     &__title{
         font-family: $titlefont;
         display:flex;
         justify-content: space-between;
         & i{
             font-size: 30px;
-            &:hover{
-            @include heartfill;
-            }
         }
     }
     & h3{
         margin-top:25px;
         @include slidein;
+        &::after{
+            content:"";
+            display:block;
+            width:50px;
+            height:3px;
+            background-color:$tertiarycolor;
+            margin-top:5px;
+            margin-bottom: 15px;
+            @include slidein(1.8s);
+        }
     }
     & ul{ 
         & li{
@@ -38,18 +49,27 @@
             border-radius:15px;
             box-shadow: 0px 5px 20px rgb(153 153 153 / 30%);
             margin: 15px 0 15px 0;
-            &:hover i{
+
+            &:hover .li__check{
                 animation: check 0.5s ease-in-out;
                 animation-fill-mode: both;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                border-radius:0 15px 15px 0;
+            }
+            &:hover i{
+                animation: spin .5s ease-in-out;
+                animation-fill-mode: both;
+                border-radius:0 15px 15px 0;
             }
             & i{
-                flex:0;
                 display:flex;
                 justify-content:center;
                 align-items:center;
                 color: white;
                 font-weight: bold;
-                font-size:20px;
+                font-size:25px;
                 border-radius:0 15px 15px 0;
                 }
             }
@@ -89,7 +109,7 @@
  
         }
         .li__price{
-            flex:1;
+            flex:0.5;
             padding:15px;
             display:flex;
             justify-content:flex-end;

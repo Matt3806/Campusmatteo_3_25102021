@@ -69,7 +69,8 @@
                 margin:0 15px 0 0;
                 border:solid;
                 border-radius: 50%;
-                width:25px;
+                width:30px;
+                height:30px;
                 position:relative;
                 left:-10px;
                 background-color: $primarycolor;
@@ -81,8 +82,10 @@
             }
             &:hover{
             background-color: $ulcolor;
+            transition:0.3s ease-in;
             & i{
                 color:$primarycolor;
+                transition:0.3s ease-in-out;
             }
             } 
         }
@@ -131,7 +134,7 @@
             align-items: center;
             height:100%;
             padding: 0 15px 0 15px;
-             i{
+            i{
                 font-size:30px;
                 &:hover{
                     @include heartfill;

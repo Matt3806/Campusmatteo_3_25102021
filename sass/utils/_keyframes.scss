@@ -21,9 +21,14 @@
 @keyframes fondu-in{
     0%{
         opacity:0;
+        bottom:-25px;
+    }
+    70%{
+        opacity:.5;
     }
     100%{
         opacity:1;
+        bottom:0;
     }
 }
 @keyframes slide{
@@ -49,5 +54,10 @@
     100%{
         flex:1;
         background-color:$tertiarycolor ;
+    }
+}
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
     }
 }

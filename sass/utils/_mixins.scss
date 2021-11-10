@@ -1,10 +1,13 @@
 @mixin heartfill {
-    font-weight: 900;
+    font-weight:900;
     background: -webkit-linear-gradient($secondarycolor, $primarycolor);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: fondu-in .5s ease-in-out;
 }
 @mixin appear($time: 2s) {
+    position:relative;
+    bottom:-25px;
     opacity:0;
     animation: fondu-in 0.2s ease-out;
     animation-delay: $time;

@@ -13,6 +13,9 @@
         }
     }
     .restaurant{
+        h2{
+            margin-top:0;
+        }
         &__column{
             display:flex;
             flex-direction:column;

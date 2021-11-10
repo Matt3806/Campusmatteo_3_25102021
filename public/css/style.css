@@ -61,9 +61,14 @@ ul, nav {
 @keyframes fondu-in {
   0% {
     opacity: 0;
+    bottom: -25px;
+  }
+  70% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
+    bottom: 0;
   }
 }
 @keyframes slide {
@@ -91,6 +96,11 @@ ul, nav {
     background-color: #99E2D0;
   }
 }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .btn {
   background-image: linear-gradient(#FF79DA, #9356DC);
   color: whitesmoke;
@@ -112,21 +122,7 @@ ul, nav {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
-hr {
-  width: 50px;
-  height: 3px;
-  background-color: #99E2D0;
-  border: 0;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  position: relative;
-  left: -300%;
-  animation: slide 1s forwards;
-  animation-delay: 1.8s;
-}
-
 .loader {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,6 +134,9 @@ hr {
   animation-delay: 1.8s;
   animation-fill-mode: both;
   z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .loader__letter {
   display: flex;
@@ -269,7 +268,8 @@ header {
   margin: 0 15px 0 0;
   border: solid;
   border-radius: 50%;
-  width: 25px;
+  width: 30px;
+  height: 30px;
   position: relative;
   left: -10px;
   background-color: #9356DC;
@@ -281,9 +281,11 @@ header {
 }
 .howto ul li:hover {
   background-color: #e9d9ff;
+  transition: 0.3s ease-in;
 }
 .howto ul li:hover i {
   color: #9356DC;
+  transition: 0.3s ease-in-out;
 }
 
 .restaurant {
@@ -339,6 +341,7 @@ header {
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: fondu-in 0.5s ease-in-out;
 }
 
 .bgimg {
@@ -360,6 +363,14 @@ header {
   bottom: 50px;
   margin-bottom: -50px;
 }
+.menu button :hover {
+  font-weight: 900;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fondu-in 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
 .menu__title {
   font-family: "Shrikhand", cursive;
   display: flex;
@@ -368,18 +379,25 @@ header {
 .menu__title i {
   font-size: 30px;
 }
-.menu__title i:hover {
-  font-weight: 900;
-  background: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .menu h3 {
   margin-top: 25px;
   position: relative;
   left: -300%;
   animation: slide 1s forwards;
   animation-delay: 1.6s;
+}
+.menu h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  position: relative;
+  left: -300%;
+  animation: slide 1s forwards;
+  animation-delay: 1.8s;
 }
 .menu ul li {
   display: flex;
@@ -389,39 +407,55 @@ header {
   box-shadow: 0px 5px 20px rgba(153, 153, 153, 0.3);
   margin: 15px 0 15px 0;
 }
-.menu ul li:hover i {
+.menu ul li:hover .li__check {
   animation: check 0.5s ease-in-out;
   animation-fill-mode: both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+}
+.menu ul li:hover i {
+  animation: spin 0.5s ease-in-out;
+  animation-fill-mode: both;
+  border-radius: 0 15px 15px 0;
 }
 .menu ul li i {
-  flex: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 0 15px 15px 0;
 }
 .menu .li__1 {
+  position: relative;
+  bottom: -25px;
   opacity: 0;
   animation: fondu-in 0.2s ease-out;
   animation-delay: 2s;
   animation-fill-mode: both;
 }
 .menu .li__2 {
+  position: relative;
+  bottom: -25px;
   opacity: 0;
   animation: fondu-in 0.2s ease-out;
   animation-delay: 2.2s;
   animation-fill-mode: both;
 }
 .menu .li__3 {
+  position: relative;
+  bottom: -25px;
   opacity: 0;
   animation: fondu-in 0.2s ease-out;
   animation-delay: 2.4s;
   animation-fill-mode: both;
 }
 .menu .li__4 {
+  position: relative;
+  bottom: -25px;
   opacity: 0;
   animation: fondu-in 0.2s ease-out;
   animation-delay: 2.6s;
@@ -449,7 +483,7 @@ header {
   text-overflow: ellipsis;
 }
 .menu .li__price {
-  flex: 1;
+  flex: 0.5;
   padding: 15px;
   display: flex;
   justify-content: flex-end;
@@ -458,6 +492,8 @@ header {
 .menu .btn {
   align-self: center;
   margin: 25px 0 25px 0;
+  position: relative;
+  bottom: -25px;
   opacity: 0;
   animation: fondu-in 0.2s ease-out;
   animation-delay: 2s;
@@ -480,6 +516,9 @@ header {
     margin-right: 15px;
   }
 
+  .restaurant h2 {
+    margin-top: 0;
+  }
   .restaurant__column {
     display: flex;
     flex-direction: column;
