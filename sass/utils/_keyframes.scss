@@ -53,7 +53,17 @@
     }
     100%{
         flex:1;
-        background-color:$tertiarycolor ;
+        background-color:$tertiarycolor;
+    }
+}
+@keyframes checkout{
+    from{
+        flex:1;
+        background-color:$tertiarycolor;
+    }
+    to{
+        flex:0;
+        background-color:white
     }
 }
 @keyframes spin{

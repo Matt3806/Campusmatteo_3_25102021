@@ -4,6 +4,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fondu-in .5s ease-in-out;
+    animation-delay: .1s;
+    transition:.5s ease-in-out;
 }
 @mixin appear($time: 2s) {
     position:relative;

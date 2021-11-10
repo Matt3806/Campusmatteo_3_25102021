@@ -17,7 +17,6 @@
     margin-bottom: -50px;
     & button :hover{
         @include heartfill;
-        transition:.5s ease-in-out;
     }
     &__title{
         font-family: $titlefont;
@@ -49,7 +48,16 @@
             border-radius:15px;
             box-shadow: 0px 5px 20px rgb(153 153 153 / 30%);
             margin: 15px 0 15px 0;
+            .li__check{
+                animation: checkout .5s ease-in-out;
+                animation-fill-mode: both;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                border-radius:0 15px 15px 0;
+            }
 
+            
             &:hover .li__check{
                 animation: check 0.5s ease-in-out;
                 animation-fill-mode: both;
