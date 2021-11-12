@@ -37,11 +37,12 @@
             background-color:$tertiarycolor;
             margin-top:5px;
             margin-bottom: 15px;
-            @include slidein(1.8s);
+            @include slidein(.8s);
         }
     }
     & ul{ 
         & li{
+            cursor: pointer;
             display:flex;
             background-color: white;
             height:75px;
@@ -86,13 +87,13 @@
             @include appear;
         }
         .li__2{
-            @include appear(2.2s);
+            @include appear(1.2s);
         }
         .li__3{
-            @include appear(2.4s);
+            @include appear(1.4s);
         }
         .li__4{
-            @include appear(2.6s)
+            @include appear(1.6s)
         }
         .li__content{
             flex:3;
@@ -126,7 +127,7 @@
     & .btn{
         align-self: center;
         margin: 25px 0 25px 0;
-        @include appear (2.8s);
+        @include appear (1.8s);
         width:35%;
     }
 }

@@ -1,7 +1,8 @@
-@import "./base/base";
+
 @import "./utils/variables";
 @import"./utils/keyframes";
 @import"./utils/mixins";
+@import "./base/base";
 @import"./components/btn";
 @import"./layout/loader";
 @import"./layout/footer";
@@ -13,7 +14,16 @@
 
 
 
-
+input{
+    border-style: none;
+    background-color:$bgcolorbold;
+    border-radius:0;
+    font-weight: bold;
+    padding-left:20px;
+    &:focus{
+        outline:none;
+    }
+}
 
 
 

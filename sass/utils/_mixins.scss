@@ -7,7 +7,7 @@
     animation-delay: .1s;
     transition:.5s ease-in-out;
 }
-@mixin appear($time: 2s) {
+@mixin appear($time: 1s) {
     position:relative;
     bottom:-25px;
     opacity:0;
@@ -15,7 +15,7 @@
     animation-delay: $time;
     animation-fill-mode: both;
 }
-@mixin slidein($time2:1.6s){
+@mixin slidein($time2:.6s){
     position:relative;
     left:-300%;
     animation:slide 1s forwards;
