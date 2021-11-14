@@ -24,6 +24,10 @@
         justify-content: space-between;
         & i{
             font-size: 30px;
+            cursor: pointer;
+            &:hover{
+                @include heartfill;
+            }
         }
     }
     & h3{
@@ -129,5 +133,6 @@
         margin: 25px 0 25px 0;
         @include appear (1.8s);
         width:35%;
+        min-width:250px;
     }
 }

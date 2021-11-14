@@ -394,6 +394,16 @@ header {
 }
 .menu__title i {
   font-size: 30px;
+  cursor: pointer;
+}
+.menu__title i:hover {
+  font-weight: 900;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fondu-in 0.5s ease-in-out;
+  animation-delay: 0.1s;
+  transition: 0.5s ease-in-out;
 }
 .menu h3 {
   margin-top: 25px;
@@ -524,6 +534,7 @@ header {
   animation-delay: 1.8s;
   animation-fill-mode: both;
   width: 35%;
+  min-width: 250px;
 }
 
 @media (min-width: 768px) {
