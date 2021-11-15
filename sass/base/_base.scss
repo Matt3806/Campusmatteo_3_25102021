@@ -39,3 +39,13 @@ ul, nav
 	list-style-type: none;
 }
 
+input{
+    border-style: none;
+    background-color:$bgcolorbold;
+    border-radius:0;
+    font-weight: bold;
+    padding-left:20px;
+    &:focus{
+        outline:none;
+    }
+}
